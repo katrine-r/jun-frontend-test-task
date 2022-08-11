@@ -1,5 +1,5 @@
 import React from "react";
-import "./HorseRacingList.css"
+import "./HorseRacingList.scss"
 import { useSelector } from "react-redux";
 import HorseRacingListItem from "./HorseRacingListItem/HorseRacingListItem";
 

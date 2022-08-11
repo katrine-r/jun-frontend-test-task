@@ -1,12 +1,13 @@
 import React from "react";
-import "./HorseRacingListItem.css"
+import ProgressBar from "../../UI/ProgressBar/ProgressBar";
+import "./HorseRacingListItem.scss"
 
-const HorseRacingListItem = ({ name, distance }) => {
+const HorseRacingListItem = ({ name, distance, ColorItem }) => {
     return (
         <div className="HorseRacingListItem">
             <li>
-                <span>{name}</span>
-                <span>{distance}</span> 
+                <label htmlFor="fileProgress">{name}</label>
+                <ProgressBar value={distance} max={1000} color="red" width="600px" />
             </li>
         </div>
     )

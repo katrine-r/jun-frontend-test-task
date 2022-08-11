@@ -46,14 +46,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Horse Racing</h1>
+      <h1 className="Title">Horse Racing</h1>
       <div>
         <HorseRacingList />
-      </div>
-      <div>
-        <p>Connected: { '' + isConnected }</p>
-        <p>Last pong: { lastPong || '-' }</p>
-        <button onClick={ sendPing }>Send ping</button>
       </div>
     </div>
   );
