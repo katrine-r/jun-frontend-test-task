@@ -1,9 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Styled from "styled-components";
+import "./ProgressBar.scss";
 
 const Container = Styled.div`
     progress {
+        height: 10px;
         margin-right: 10px;
     }
 
@@ -22,14 +24,15 @@ const Container = Styled.div`
 
     progress[value]::-webkit-progress-value {
         height: 10px;
-        border-radius: 10px;
-        background-color: ${props => props.color};  
+        border-radius: 10px; 
+        background-color: ${props => props.color};
     }
 `;
 
 const ProgressBar = ({ value, max, color, width }) => {
+
     return (
-        <Container color={color} width={width} >
+        <Container className="ProgressWpapper" color={color} width={width} >
             <progress id="fileProgress" value={value} max={max} > 100% </progress>
             <span>{value} m</span>
         </Container>     
@@ -39,7 +42,6 @@ const ProgressBar = ({ value, max, color, width }) => {
 ProgressBar.propTypes = {
     value: PropTypes.number.isRequired,
     max: PropTypes.number,
-    color: PropTypes.string,
     width: PropTypes.string
 }
 
